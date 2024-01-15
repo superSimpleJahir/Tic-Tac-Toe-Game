@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import Square from "./Square";
-import { calculateWinner } from "./../utils/calculateWinner";
+import { calculateWinner } from './../utils/calculateWinner';
 
-const Board = ({ squares, xIsNext, onPlay }) => {
+const Board = ({squares, xIsNext, onPlay}) => {
   const handleClick = (i) => {
     if (squares[i] || calculateWinner(squares)) {
       return;
@@ -14,7 +14,7 @@ const Board = ({ squares, xIsNext, onPlay }) => {
     } else {
       nextSquares[i] = "O";
     }
-    onPlay(nextSquares);
+    onPlay(nextSquares)
   };
 
   const winner = calculateWinner(squares);
