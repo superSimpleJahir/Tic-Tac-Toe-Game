@@ -27,8 +27,8 @@ const Board = ({squares, xIsNext, onPlay}) => {
   }
 
   return (
-    <>
-      <h1>{status}</h1>
+    <div>
+      <h1 className="font-bold text-2xl mb-3">{status}</h1>
       <div className="flex">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -46,7 +46,7 @@ const Board = ({squares, xIsNext, onPlay}) => {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   );
 };
 

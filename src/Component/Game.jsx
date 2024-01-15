@@ -29,17 +29,17 @@ const Game = () => {
       description = `Go to start the game.`;
     }
     return (
-      <li key={index}>
+      <li key={index} className="font-semibold">
         <button onClick={() => jumpTo(index)}>{description}</button>
       </li>
     );
   });
 
   return (
-    <>
+    <div className="flex justify-center mt-28 gap-8">
       <Board xIsNext={xIsNext} squares={currentSquare} onPlay={handlePlay} />
       <History allHistory={allHistory} />
-    </>
+    </div>
   );
 };
 
